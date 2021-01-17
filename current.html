@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<META HTTP-EQUIV="refresh" CONTENT="120">
+		<title>Collector</title>
+		<script src="ChartOld.js"></script>
+	</head>
+	<body>
+		<div style="width:99%">
+			<div>
+				<canvas id="canvas" height="200" width="400"></canvas>
+			</div>
+		</div>
+	<script>
+		var lineChartData = {
+			labels : ["06:00","","","","","","07:00","","","","","","08:00","","","","","","09:00","","","","","","10:00","","","","","","11:00","","","","","","12:00","","","","","","13:00","","","","","","14:00","","","","","","15:00","","","","","","16:00","","","","","","17:00","","","","","","18:00","","","","","","19:00","","","","","","20:00","","","","","",],
+			datasets : [
+				{
+				label: "Hi",
+				fillColor : "rgba(255,110,110,0.2)",
+				strokeColor : "rgba(255,110,110,1)",
+				pointColor : "rgba(255,110,110,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,220,220,1)",
+				data : [14.45,14.45,14.45,14.45,14.45,14.45,14.45,14.45,14.45,14.45,14.45,14.4,14.4,14.4,14.4,14.4,14.4,14.4,14.4,14.4,14.4,14.4,14.45,14.45,14.5,14.65,14.55,14.5,14.5,14.55,14.7,14.5,19.05,19.25,19.65,22.0,20.25,19.25,22.0,23.25,23.9,22.45,23.0,22.5,21.95,26.5,]
+				},
+				{
+				label: "Lo",
+				fillColor : "rgba(110,110,255,0.2)",
+				strokeColor : "rgba(110,110,255,1)",
+				pointColor : "rgba(110,110,255,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,220,220,1)",
+				data : [15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.45,15.4,15.3,15.3,15.15,14.95,14.8,14.75,14.7,14.55,12.5,12.25,12.5,12.55,14.7,13.95,13.0,14.15,17.4,16.25,15.55,14.25,16.9,14.8,19.2,]
+				},
+			]
+		}
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true, animation: false, tooltipFontSize: 30, tooltipTitleFontSize: 40
+		});
+	}
+	</script>
+   Sun elevation angle now : 16.9 (DEG),   Solar noon : 12:52,   SunRise : 8:38,   SunSet : 17:6,   Day Length : 8:28:27
+	</body>
+</html>

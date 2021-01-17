@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<META HTTP-EQUIV="refresh" CONTENT="120">
+		<title>Performance</title>
+		<script src="ChartOld.js"></script>
+	</head>
+	<body>
+		<canvas id="canvas" height="380" width="800"></canvas>
+	<script>
+		var lineChartData = {
+		    labels : ["9:00","","","","","","10:00","","","","","","11:00","","","","","","12:00","","","","","","13:00","","","","","","14:00","","","","","","15:00","","","","","","16:00","","","","","","17:00","","","","","","18:00","","","","","",		],
+			datasets : [
+				{
+				label: "Performance",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(150,150,150,1)",
+				pointColor : "rgba(150,150,150,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,47.7,0.0,235.5,149.2,74.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,]
+				},
+				{
+				label: "Performance",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(100,0,0,0.1)",
+				pointColor : "rgba(100,0,0,0.1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0.0,0.0,0.0,45.4,32.3,0.0,0.0,13.7,0.0,0.0,18.8,0.0,26.6,13.7,50.3,13.5,18.7,63.3,55.4,40.7,59.8,63.8,138.9,25.5,98.6,88.3,43.8,61.0,43.0,74.1,0.0,116.3,60.2,62.4,86.5,36.0,0.0,38.9,0.0,74.5,14.3,38.5,57.2,20.8,28.9,0.0,29.1,16.2,34.4,0.0,0.0,0.0,21.3,52.7,21.3,34.2,0.0,0.0,60.5,0.0,]
+				},
+				{
+				label: "Performance",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(100,0,0,1)",
+				pointColor : "rgba(100,0,0,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0.0,0.0,0.0,40.3,28.5,0.0,0.0,11.9,0.0,0.0,16.6,0.0,23.7,11.9,45.1,11.9,16.6,56.9,49.8,33.2,49.8,49.8,118.6,16.6,83.0,73.5,33.2,49.8,33.2,61.7,0.0,99.7,49.8,52.2,73.5,28.5,0.0,33.2,0.0,66.4,11.9,33.2,49.8,16.6,23.7,0.0,23.7,11.9,28.5,0.0,0.0,0.0,16.6,45.1,16.6,28.5,0.0,0.0,52.2,0.0,]
+				},
+			]
+		}
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true, animation: false, tooltipFontSize: 30, tooltipTitleFontSize: 40, datasetStrokeWidth : 3, pointDotRadius : 5
+		});
+	}
+	</script>
+	Harvest : 0.3 KWh. Loss: 0.0 KWh (0.07 Euro)
+	</body>
+</html>
