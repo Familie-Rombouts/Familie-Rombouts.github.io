@@ -1,1 +1,1 @@
-# home
+# home automation status
