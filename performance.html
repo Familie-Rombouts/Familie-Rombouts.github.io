@@ -11,3 +11,45 @@
 		var lineChartData = {
 		    labels : ["9:00","","","","","","10:00","","","","","","11:00","","","","","","12:00","","","","","","13:00","","","","","","14:00","","","","","","15:00","","","","","","16:00","","","","","","17:00","","","","","","18:00","","","","","",		],
 			datasets : [
+				{
+				label: "Performance",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(150,150,150,1)",
+				pointColor : "rgba(150,150,150,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,]
+				},
+				{
+				label: "Performance",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(100,0,0,0.1)",
+				pointColor : "rgba(100,0,0,0.1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,]
+				},
+				{
+				label: "Performance",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(100,0,0,1)",
+				pointColor : "rgba(100,0,0,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,]
+				},
+			]
+		}
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true, animation: false, tooltipFontSize: 30, tooltipTitleFontSize: 40, datasetStrokeWidth : 3, pointDotRadius : 5
+		});
+	}
+	</script>
+	Harvest : 0.0 KWh. Loss: 0.0 KWh (0.0 Euro)
+	</body>
+</html>
