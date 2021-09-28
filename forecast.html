@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<META HTTP-EQUIV="refresh" CONTENT="120">
+		<title>Forecast</title>
+		<script src="ChartOld.js"></script>
+	</head>
+	<body>
+		<canvas id="canvas" height="380" width="800"></canvas>
+	<script>
+		var lineChartData = {
+		    labels : ["7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00",		],
+			datasets : [
+				{
+				label: "Forecast",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(240,240,240,1)",
+				pointColor : "rgba(240,240,240,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0,7,61,156,231,256,238,220,209,176,130,71,15,0,]
+				},
+				{
+				label: "Forecast",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(200,200,200,1)",
+				pointColor : "rgba(200,200,200,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0,12,93,217,333,418,445,422,369,291,198,99,21,0,]
+				},
+				{
+				label: "Forecast",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(160,160,160,1)",
+				pointColor : "rgba(160,160,160,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0,6,43,102,157,196,220,221,200,166,107,42,7,0,]
+				},
+				{
+				label: "Forecast",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(120,120,120,1)",
+				pointColor : "rgba(120,120,120,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0,18,112,248,340,350,293,229,175,115,69,35,7,0,]
+				},
+				{
+				label: "Forecast",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(80,80,80,1)",
+				pointColor : "rgba(80,80,80,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [0,8,51,109,150,174,180,187,196,175,138,89,26,0,]
+				},
+				{
+				label: "Forecast",
+				fillColor : "rgba(0,0,0,0)",
+				strokeColor : "rgba(0,0,0,1)",
+				pointColor : "rgba(0,0,0,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,0,0,1)",
+				data : [2.2,65.4,208.5,349.0,458.7,522.2,583.2,504.5,318.8,243.6,239.3,90.5,32,0,]
+				},
+			]
+		}
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true, animation: false, tooltipFontSize: 30, tooltipTitleFontSize: 40, datasetStrokeWidth : 6, pointDotRadius : 8
+		});
+	}
+	</script>
+Date : 2021-09-28T18:40:00    Temperature : 16.3    Chill Temperature : 16.3    Sun Power : 48.0 Sun Energy 33.0	</body>
+</html>
